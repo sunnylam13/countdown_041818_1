@@ -50,3 +50,16 @@ I tried:
 this one worked:
 
 	subprocess.call(['/Applications/VLC.app/Contents/MacOS/VLC --intf ncurses /Users/sunnyair/Dropbox/python_projects/countdown_041818_1/countdown/alarm.wav'],shell=True)
+
+## Wednesday, April 18, 2018 10:18 AM
+
+Ideas for similar
+
+this is a simple delay before execution
+
+could...
+
+* use `time.sleep()` to give user chance to press Ctrl-C to cancel action like deleting files...  program could print "Print Ctrl-C to cancel" message and then handle any `KeyboardInterrupt` exceptions with `try` and `except` statements
+
+* for long term counts, use `timedelta` objects to measure days, hours, minutes, seconds until some point in the future...
+
