@@ -32,3 +32,21 @@ need to configure `open` for Mac
 
 [VLC Command Line](https://wiki.videolan.org/Command_line/)
 
+[How to open and play mp3 file in python?](https://www.daniweb.com/programming/software-development/threads/491663/how-to-open-and-play-mp3-file-in-python)
+
+	import subprocess
+
+	# pick an external mp3 player you have
+	sound_program = "path to player"
+	# pick a sound file you have
+	sound_file = "path to mp3"
+	subprocess.call([sound_program, sound_file])
+
+I tried:
+
+	# subprocess.Popen(['open','-a /Applications/VLC.app/Contents/MacOS/VLC','alarm.wav'],shell=True)
+	# subprocess.call(['/Applications/VLC.app/Contents/MacOS/VLC','--intf ncurses', 'alarm.wav'],shell=True)
+
+this one worked:
+
+	subprocess.call(['/Applications/VLC.app/Contents/MacOS/VLC --intf ncurses /Users/sunnyair/Dropbox/python_projects/countdown_041818_1/countdown/alarm.wav'],shell=True)
