@@ -36,7 +36,5 @@ while timeLeft > 0:
 	logging.debug('New Time Left:  %s' % str(timeLeft))
 
 # at end of countdown, play sound file
-# subprocess.Popen(['open','-a /Applications/VLC.app/Contents/MacOS/VLC','alarm.wav'],shell=True)
-# subprocess.call(['/Applications/VLC.app/Contents/MacOS/VLC','--intf ncurses', 'alarm.wav'],shell=True)
 subprocess.call(['/Applications/VLC.app/Contents/MacOS/VLC /Users/sunnyair/Dropbox/python_projects/countdown_041818_1/countdown/alarm.wav'],shell=True)
 
